@@ -7,4 +7,4 @@ dotfiles of my ubuntu rice
 ![screen-2](screenshots/2020-09-07_16-18.png)
 
 ### Polybar spotify status
-![spotify_status](screenshots/spotify_status.png)
+
