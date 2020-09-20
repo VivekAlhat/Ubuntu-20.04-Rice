@@ -18,11 +18,11 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
+background = ${xrdb:color0:#222}
+;background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = ${xrdb:color7:#222}
+;foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -34,7 +34,7 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+;radius = 6.0
 fixed-center = false
 
 background = ${colors.background}
@@ -57,10 +57,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FiraCode:pixelsize=10;1
 
 modules-left = i3 spotify
-modules-center = mpd
-modules-right = filesystem alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-
-tray-position = right
+;modules-center = mpd
+modules-right = filesystem pulseaudio xkeyboard wlan battery temperature date powermenu
+tray-position = left
 tray-padding = 2
 ;tray-background = #0063ff
 
