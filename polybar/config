@@ -35,7 +35,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -48,7 +48,7 @@ line-color = #f00
 
 padding-left = 0
 padding-right = 2
-border-bottom = 4
+border-bottom = 0
 
 module-margin-left = 1
 module-margin-right = 2
