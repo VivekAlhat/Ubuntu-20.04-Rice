@@ -2,9 +2,11 @@
 dotfiles of my ubuntu rice
 
 ### Screens
-![screen-1](screenshots/2020-09-07_16-12.png)
+![screen-1](screenshots/2020-10-12_21-21.png)
 
-![screen-2](screenshots/2020-09-07_16-18.png)
+![screen-2](screenshots/2020-10-12_21-18.png)
 
-### Polybar spotify status
-![polybar-status](screenshots/2020-09-07_20-04.png)
+![screen-3](screenshots/2020-10-12_21-17.png)
+
+![screen-4](screenshots/2020-10-12_21-20.png)
+
