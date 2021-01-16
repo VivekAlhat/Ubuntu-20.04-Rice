@@ -10,19 +10,21 @@
 #
 
 # Disable window titlebars entirely
-gaps inner 7
+gaps inner 5
 gaps outer 0
 #gaps top 40
 #gaps bottom 40
+for_window [class="jetbrains-idea" title="win0"] floating enable;
 for_window [class="^.*"] border pixel 3.5
 #border_radius 2
+
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
 # gaps inner all set 10
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
@@ -109,7 +111,7 @@ bindsym Mod1+Return exec i3-sensible-terminal
 bindsym Mod1+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod1+d exec "rofi -show run -theme ~/.cache/wal/colors-rofi-dark.rasi"
+bindsym Mod1+d exec "./rofi/1080p/launchers/ribbon/launcher.sh"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -213,8 +215,6 @@ bindsym Mod1+Shift+0 move container to workspace number $ws10
 bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod1+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym Mod1+Shift+e exec "/home/vivekalhat/powermenu.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -242,55 +242,17 @@ mode "resize" {
 }
 
 bindsym Mod1+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#       status_command i3status
-#}
-
-#colors
-#https://github.com/arcticicestudio/nord
-#Polar Night
-set $nord-grey1 #2e3440
-set $nord-grey2 #3b4252
-set $nord-grey3 #434c5e
-set $nord-grey4 #4c566a
-
-#Snow Storm
-set $nord-white1 #d8dee9
-set $nord-white2 #e5e9f0
-set $nord-white3 #eceff4
-
-#Frost
-set $nord-frost1 #8fbcbb
-set $nord-frost2 #88c0d0
-set $nord-frost3 #81a1c1
-set $nord-frost4 #5e81ac
-
-#Aurora
-set $nord-red #bf616a
-set $nord-orange #d08770
-set $nord-yellow #ebcb8b
-set $nord-green #a3be8c
-set $nord-pink #b48ead
-
-#class                      border        backgr       text	    indicator   childborder
-client.focused		    $nord-grey1  $nord-grey1  $nord-white1  $nord-white1  $nord-white1
-client.focused_inactive	    $nord-grey1  $nord-grey1  $nord-white1  $nord-grey4   $nord-grey4
-client.unfocused	    $nord-grey1  $nord-grey1  $nord-white1  $nord-grey4   $nord-grey4
-client.urgent		    $nord-grey1  $nord-grey1  $nord-white1  $nord-pink    $nord-pink
-client.placeholder	    $nord-grey1  $nord-grey1  $nord-white1  $nord-pink    $nord-pink
-client.background	    $nord-grey1
-
-
-bindsym Shift+Print exec flameshot full -p ~/Pictures/
-bindsym Mod1+Shift+x exec betterlockscreen -u ~/Pictures/wallhaven-p8drxp.jpg -l blur -b 0.7 -t "Are Ya' Winning Son?" -off 15
+bindsym Shift+Print exec flameshot full -p ~/Pictures/screenshots
+bindsym Mod1+Shift+x exec betterlockscreen -u ~/Pictures/anime.jpg -l blur -b 0.7 -t "Are Ya' Winning Son?" -off 15
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# class                 border  backgr. text    indicator child_border                                                                     
+client.focused_inactive #D8DEE9 #212121 #d9d9d9 #0d1010 #063340                                                                            
+client.unfocused        #D8DEE9 #cecece #d9d9d9 #424242 #063340                                                                            
+client.focused          #d9d9d9 #cecece #000000 #d9d9d9 #d9d9d9   
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -305,6 +267,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 exec i3-config-wizard
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id picom --config ~/.config/picom.conf --experimental-backends
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-p8drxp.jpg
-exec_always --no-startup-id wal -i ~/Pictures/wallhaven-p8drxp.jpg --saturate 0.7
+exec_always --no-startup-id cd $HOME/picom/build/src/ && ./picom --config ~/.config/picom.conf --experimental-backends
+exec_always --no-startup-id feh --bg-fill ~/Pictures/anime.jpg
+exec_always --no-startup-id wal -i ~/Pictures/anime.jpg --saturate 0.7 >/dev/null 2>&1
