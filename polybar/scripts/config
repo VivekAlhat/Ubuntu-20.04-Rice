@@ -18,8 +18,8 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #2E3440
+background = ${xrdb:color0:#222}
+;background = #2E3440
 background-alt = #444
 foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
@@ -43,12 +43,12 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-;border-size = 4
-;border-color = #00000000
+border-size = 4
+border-color = #00000000
 
 padding-left = 0
 padding-right = 2
-border-bottom = 5
+border-bottom = 3
 
 module-margin-left = 1
 module-margin-right = 2
@@ -62,7 +62,6 @@ modules-center = date
 modules-right = pulseaudio battery temperature wlan
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
